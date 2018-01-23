@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Weight Trackr</title>
+      {% else %}
+      <title>Welcome to Weight Trackr</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Weight Trackr: <a href="/index">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
