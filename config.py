@@ -7,7 +7,9 @@ class Config(object):
     TESTING = False
     CSRF_ENABLED = True
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'this-really-needs-to-be-changed'
-
+    SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
+    # disables signalling app every time a change is about to be made in the db
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
 class ProductionConfig(Config):
     DEBUG = False
