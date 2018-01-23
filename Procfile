@@ -1,1 +1,1 @@
-web: gunicorn app:weight-trackr
+web: gunicorn app:app
